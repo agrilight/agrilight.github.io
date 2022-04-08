@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Light</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <main>
+        <div>
+            <img src="images/1.png" alt="Agri-light" style="width: 100vw;">
+        </div>
+        <div class="txt">
+            Welcome to AgriLight<br>
+            <span style="font-size: .7em">Agriculture is a field of unlimited possibilities</span>
+        </div>
+        <div>
+            <!-- introduction -->
+        </div>
+        <div class="exp">
+            Pasture plants in animal feed:
+            <a href="/families.html" class="exp-btn" data-aos="fade-up" data-aos-duration="500">
+                Explore 
+            </a>
+        </div>
+    </main>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    :root{
+        --bg-clr: rgb(232, 245, 219);
+        --btn-clr: rgb(202, 208, 136);
+        --btn-clr2: rgb(235, 243, 158);
+        --txt-clr: rgb(65, 87, 38);
+    }
+    body{
+        background-color: var(--bg-clr);
+    }
+    a{
+        text-decoration: none;
+    }
+    a:hover, a:focus{
+        color: var(--txt-clr)
+    }
+    .txt{
+        font-size: 2em;
+        color: var(--txt-clr);
+        text-align: center;
+    }
+    @media screen and (max-width: 500px){
+        .txt>span{font-size: .6em!important;}
+    }
+    .exp{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: var(--txt-clr);
+        font-size: 1.25em;
+    }
+    .exp-btn{
+        border-style: none;
+        border-radius: 10px;
+        text-align: center;
+        padding: 5px 30px;
+        font-size: 1.25em;
+        color: var(--txt-clr);
+        border: 2px solid var(--btn-clr);
+        background-color: transparent;
+        margin: 20px 0;
+        position: relative;
+        overflow: hidden;
+        transition: all .3s ease;
+        z-index: 1;
+    }
+    .exp-btn::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: var(--btn-clr);
+        transform: scaleX(0);
+        z-index: -1;
+        transition: all .2s ease-in-out;
+    }
+    .exp-btn:hover, .exp-btn:focus{
+        box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .7);
+    }
+    .exp-btn:hover::before, .exp-btn:focus::before{
+        transform: scaleX(1);
+    }
+</style>
+<script>
+    AOS.init();
+</script>
